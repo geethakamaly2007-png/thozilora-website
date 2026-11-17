@@ -1,106 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
-<style>
-body {
-    background-color: lightblue;
-    font-family: Arial;
-    padding: 30px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thozilora | Digital Services</title>
 
-h1 {
-    color: darkblue;
-}
-input, select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border: 1px solid gray;
-    border-radius: 6px;
+<style>
+* {
     box-sizing: border-box;
 }
 
-form {
-    background-color: white;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #263449;
+}
+
+header {
+    background: #12366b;
+    color: white;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 450px;
-    margin-top: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav {
+    background: #0d2b55;
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 15px;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: white;
+}
+
+.hero h2 {
+    color: #12366b;
+    font-size: 34px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #12366b;
+    margin-bottom: 25px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.service-box h3 {
+    color: #1456a0;
+}
+
+.service-box p {
+    line-height: 1.6;
+}
+
+.why {
+    background: white;
+    line-height: 2;
+}
+
+.portfolio-link {
+    display: inline-block;
+    background: #1456a0;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.contact {
+    background: #e8eff9;
+}
+
+.contact a {
+    margin: 8px;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 480px;
+    margin: 25px auto;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccd5e2;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
 button {
-    background-color: blue;
+    background: #1456a0;
     color: white;
-    padding: 12px 20px;
+    padding: 13px 22px;
     border: none;
-    border-radius: 6px;
+    border-radius: 7px;
     cursor: pointer;
     font-size: 16px;
 }
+
+button:hover, .portfolio-link:hover {
+    background: #0d3d75;
+}
+
+footer {
+    background: #12366b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
 @media (max-width: 600px) {
-    body {
-        padding: 15px;
+    nav a {
+        display: inline-block;
+        margin: 7px;
     }
 
-    form {
-        max-width: 100%;
+    .hero h2 {
+        font-size: 27px;
     }
 
-    h1 {
-        font-size: 26px;
+    .service-box {
+        width: 100%;
+    }
+
+    section {
+        padding: 30px 15px;
     }
 }
 </style>
 </head>
+
 <body>
 
-    <h1>Welcome to Thozilora</h1>
+<header>
+    <h1>THOZILORA</h1>
+    <p>Creative Digital Services</p>
+</header>
 
-    <p>We create websites for small businesses.</p>
-<a href="https://wa.me/919080635109" target="_blank">
-    <button>Contact Us on WhatsApp</button>
-</a>
-<h2>Customer Enquiry Form</h2>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<form id="enquiryForm">
-    <label>Your Name:</label><br>
-    <input type="text" id="customerName" required><br><br>
+<div class="hero" id="home">
+    <h2>Welcome to Thozilora</h2>
+    <p>We help small businesses build their online presence<br>
+    with creative and professional digital services.</p>
+    <a href="#contact">
+        <button>Contact Us</button>
+    </a>
+</div>
 
-    <label>Mobile Number:</label><br>
-    <input type="tel" id="customerPhone" required><br><br>
+<section id="services">
+    <h2>Our Services</h2>
 
-    <label>What Service Do You Need?</label><br>
-    <select id="customerService" required>
-        <option value="">Select Service</option>
-        <option>Business Website</option>
-        <option>Canva Poster</option>
-        <option>PDF Design</option>
-        <option>Other</option>
-    </select><br><br>
+    <div class="services">
 
-    <button type="submit">Submit Enquiry</button>
-</form>
+        <div class="service-box">
+            <h3>Business Website Design</h3>
+            <p>Professional websites for small businesses
+            to showcase their products and services.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Canva Poster Design</h3>
+            <p>Attractive promotional posters for shops,
+            businesses and special occasions.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>PDF Design</h3>
+            <p>Neat and professional PDF documents,
+            catalogues and business materials.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="why" id="why">
+    <h2>Why Choose Thozilora?</h2>
+    <p>✔ Creative and simple designs</p>
+    <p>✔ Services for small businesses</p>
+    <p>✔ Friendly customer support</p>
+    <p>✔ Focus on quality and customer needs</p>
+</section>
+
+<section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Explore our sample designs and creative projects.</p>
+    <a class="portfolio-link"
+       href="https://sites.google.com/view/thozilora"
+       target="_blank">
+       View Our Portfolio
+    </a>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind? Get in touch with us.</p>
+
+    <a href="https://wa.me/919080635109" target="_blank">
+        <button>WhatsApp Us</button>
+    </a>
+
+    <a href="mailto:geetha.kamaly2007@gmail.com">
+        <button>Email Us</button>
+    </a>
+</section>
+
+<section>
+    <h2>Customer Enquiry Form</h2>
+
+    <form id="enquiryForm">
+
+        <label>Your Name:</label>
+        <input type="text" id="customerName" required>
+
+        <label>Mobile Number:</label>
+        <input type="tel" id="customerPhone" required>
+
+        <label>What Service Do You Need?</label>
+        <select id="customerService" required>
+            <option value="">Select Service</option>
+            <option>Business Website</option>
+            <option>Canva Poster</option>
+            <option>PDF Design</option>
+            <option>Other</option>
+        </select>
+
+        <label>Message:</label>
+        <textarea id="customerMessage" rows="4"
+        placeholder="Tell us about your requirements"></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Thozilora. All Rights Reserved.</p>
+    <p>Creative Digital Services for Small Businesses</p>
+</footer>
+
 <script>
-document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+document.getElementById("enquiryForm")
+.addEventListener("submit", function(event) {
+
     event.preventDefault();
 
     let name = document.getElementById("customerName").value;
     let phone = document.getElementById("customerPhone").value;
     let service = document.getElementById("customerService").value;
+    let details = document.getElementById("customerMessage").value;
 
-    let message = "New Customer Enquiry\n" +
-                  "Name: " + name + "\n" +
-                  "Mobile: " + phone + "\n" +
-                  "Service: " + service;
+    let message =
+        "New Customer Enquiry\n" +
+        "Name: " + name + "\n" +
+        "Mobile: " + phone + "\n" +
+        "Service: " + service + "\n" +
+        "Message: " + details;
 
     let whatsappNumber = "919080635109";
 
     let url = "https://wa.me/" + whatsappNumber +
-              "?text=" + encodeURIComponent(message);
+        "?text=" + encodeURIComponent(message);
 
     window.open(url, "_blank");
-});</script>
+});
+</script>
 
 </body>
 </html>
+
