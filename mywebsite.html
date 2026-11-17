@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Website</title>
+<style>
+body {
+    background-color: lightblue;
+    font-family: Arial;
+    padding: 30px;
+}
+
+h1 {
+    color: darkblue;
+}
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+<body>
+
+    <h1>Welcome to Thozilora</h1>
+
+    <p>We create websites for small businesses.</p>
+<a href="https://wa.me/919080635109" target="_blank">
+    <button>Contact Us on WhatsApp</button>
+</a>
+<h2>Customer Enquiry Form</h2>
+
+<form id="enquiryForm">
+    <label>Your Name:</label><br>
+    <input type="text" id="customerName" required><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="tel" id="customerPhone" required><br><br>
+
+    <label>What Service Do You Need?</label><br>
+    <select id="customerService" required>
+        <option value="">Select Service</option>
+        <option>Business Website</option>
+        <option>Canva Poster</option>
+        <option>PDF Design</option>
+        <option>Other</option>
+    </select><br><br>
+
+    <button type="submit">Submit Enquiry</button>
+</form>
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("customerName").value;
+    let phone = document.getElementById("customerPhone").value;
+    let service = document.getElementById("customerService").value;
+
+    let message = "New Customer Enquiry\n" +
+                  "Name: " + name + "\n" +
+                  "Mobile: " + phone + "\n" +
+                  "Service: " + service;
+
+    let whatsappNumber = "919080635109";
+
+    let url = "https://wa.me/" + whatsappNumber +
+              "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+});</script>
+
+</body>
+</html>
