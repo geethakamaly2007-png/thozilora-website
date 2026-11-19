@@ -298,7 +298,7 @@ document.getElementById("enquiryForm")
     let name = document.getElementById("customerName").value;
     let phone = document.getElementById("customerPhone").value;
     let service = document.getElementById("customerService").value;
-    let details = document.getElementById("customerMessage").value;
+    let details = document.getElementById("customerMessage").value.trim() || "No additional message";
 
     let message =
         "New Customer Enquiry\n" +
