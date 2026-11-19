@@ -115,13 +115,44 @@ section h2 {
     box-shadow: 0 4px 12px rgba(18,54,107,0.07);
 }
 
-.portfolio-link {
-    display: inline-block;
-    background: #1456a0;
-    color: white;
-    padding: 13px 22px;
-    border-radius: 7px;
-    text-decoration: none;
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.portfolio-card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e1eaf5;
+    box-shadow: 0 5px 20px rgba(18,54,107,0.10);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+}
+
+.portfolio-preview {
+    background: #e8eff9;
+    border-radius: 10px;
+    padding: 30px 10px;
+    margin-bottom: 18px;
+    color: #12366b;
+    font-size: 38px;
+}
+
+.portfolio-card h3 {
+    color: #1456a0;
+}
+
+.portfolio-card p {
+    line-height: 1.6;
 }
 
 .contact {
@@ -263,11 +294,35 @@ footer {
 
 <section id="portfolio">
     <h2>Our Portfolio</h2>
+
     <p>Explore our sample designs and creative projects.</p>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+            <div class="portfolio-preview">🌐</div>
+            <h3>Website Design</h3>
+            <p>Sample website designs for small businesses to build their online presence.</p>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-preview">🎨</div>
+            <h3>Canva Poster Design</h3>
+            <p>Creative promotional posters for shops, businesses and special occasions.</p>
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-preview">📄</div>
+            <h3>PDF & Catalogue Design</h3>
+            <p>Clean and professional catalogues, brochures and business documents.</p>
+        </div>
+
+    </div>
+
     <a class="portfolio-link"
        href="https://sites.google.com/view/thozilora"
        target="_blank">
-       View Our Portfolio
+       View More Designs
     </a>
 </section>
 
